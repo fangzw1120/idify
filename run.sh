@@ -4,6 +4,7 @@
 docker stop idify && docker rm idify
 
 # 构建 docker 镜像
+# docker build -t my-custom-centos:7 -f my-custom-centos.dockerfile .
 docker build -t idify .
 
 # 运行 docker 容器

@@ -38,3 +38,11 @@ EXPOSE 80
 
 # 启动 nginx 服务
 CMD ["nginx", "-g", "daemon off;"]
+
+
+# docker image push to remote hub
+# docker login
+# docker tag idify:latest forisfang/idify:20250710
+# docker push forisfang/idify:20250710
+
+# docker push forisfang/idify:tagname
