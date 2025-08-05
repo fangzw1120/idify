@@ -46,3 +46,11 @@ CMD ["nginx", "-g", "daemon off;"]
 # docker push forisfang/idify:20250710
 
 # docker push forisfang/idify:tagname
+
+# mac 宿主机安装 corepack pnpm install (Install project dependencies using corepack.)
+# cp /Users/forisfang/project/github/idify/node_modules/.pnpm/@zhbhun+background-removal@1.0.8/node_modules/@zhbhun/background-removal/dist/*  packages/web/public/background-removal/
+#  1. 本地安装：pnpm 将所有依赖项安装在项目根目录下的 node_modules 文件夹中。
+#    2. `.pnpm` 虚拟存储：pnpm 的一个核心特性是，它不会像 npm 或 Yarn 那样将所有依赖项平铺在 node_modules 的根目录下。相反，它在 node_modules/.pnpm
+#       目录中创建了一个“虚拟存储”。
+#    3. 全局内容可寻址存储：实际的包文件只在您的计算机上存储一次，位于一个全局的内容可寻址存储中（根据您之前的日志，它位于 /Users/forisfang/Library/pnpm/store/v3）。
+#    4. 硬链接：pnpm 通过硬链接（Hard Links）将全局存储中的文件链接到您项目本地的 node_modules/.pnpm 目录中，然后再链接到 node_modules 的顶层。

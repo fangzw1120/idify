@@ -5,14 +5,12 @@ import {
   defaultConfig,
 } from '@idify/common'
 
-const config: ConfigValue = import.meta.env.DEV
-  ? {
-      showGithubLink: true,
-      segment: {
-        publicPath: '/node_modules/@zhbhun/background-removal/dist/',
-      },
-    }
-  : defaultConfig
+const config: ConfigValue = {
+  ...defaultConfig,
+  segment: {
+    publicPath: '/background-removal/',
+  },
+}
 
 export default function App() {
   return (
